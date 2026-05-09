@@ -186,7 +186,9 @@ export default function PortfolioContent() {
             Looking for a reliable freelancer for AI data annotation, transcription, translation, or content evaluation projects? Let’s create clean, accurate, and high-quality data.
           </p>
           <a
-            href="mailto:anishsharma4469@gmail.com?subject=Project%20Inquiry%20-%20AI%20Data%20Annotation%20%2F%20Transcription"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=anishsharma4469@gmail.com&su=Project%20Inquiry%20-%20AI%20Data%20Annotation%20%2F%20Transcription"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block bg-white text-black px-10 py-4 rounded-full font-semibold text-lg hover:scale-105 transition-transform duration-300"
           >
             Get In Touch
