@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { projectsData as projects } from "@/lib/data";
 
 const services = [
   {
@@ -30,38 +32,7 @@ const services = [
   },
 ];
 
-const projects = [
-  {
-    id: 1,
-    title: "AI Audio Transcription",
-    category: "Transcription",
-    description: "Created clean speaker-labeled transcripts with proper formatting, unclear speech markers, and natural sentence flow.",
-  },
-  {
-    id: 2,
-    title: "Hindi-English Translation",
-    category: "Localization",
-    description: "Translated Hindi content into clear, natural English while keeping the original meaning and tone.",
-  },
-  {
-    id: 3,
-    title: "AI Response Evaluation",
-    category: "Evaluation",
-    description: "Reviewed AI-generated answers based on accuracy, helpfulness, tone, and instruction-following.",
-  },
-  {
-    id: 4,
-    title: "Content Quality Review",
-    category: "Quality Assurance",
-    description: "Improved written content by correcting grammar, structure, clarity, and readability.",
-  },
-  {
-    id: 5,
-    title: "Data Annotation Sample",
-    category: "Data Annotation",
-    description: "Classified text data into categories and reviewed labels for consistency and quality.",
-  },
-];
+
 
 const skills = [
   "AI data annotation", "Audio transcription", "Speaker labeling", "Content evaluation", 
@@ -128,23 +99,27 @@ export default function PortfolioContent() {
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-12">Portfolio Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <div
-                key={project.id}
-                className="group relative overflow-hidden rounded-2xl bg-white/[0.03] border border-white/10 p-8 backdrop-blur-md transition-all hover:bg-white/[0.05] hover:border-white/20"
-              >
-                <div className="absolute inset-0 bg-gradient-to-b from-white/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="relative z-10 flex flex-col h-full justify-between min-h-[200px]">
-                  <div>
-                    <span className="text-xs uppercase tracking-widest text-gray-500 mb-4 block">
-                      {project.category}
-                    </span>
-                    <h3 className="text-xl font-semibold mb-3 text-white">{project.title}</h3>
-                    <p className="text-gray-400 font-light leading-relaxed">
-                      {project.description}
-                    </p>
+              <Link href={`/projects/${project.slug}`} key={project.id}>
+                <div
+                  className="group relative overflow-hidden rounded-2xl bg-white/[0.03] border border-white/10 p-8 backdrop-blur-md transition-all hover:bg-white/[0.05] hover:border-white/20 h-full"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-b from-white/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="relative z-10 flex flex-col h-full justify-between min-h-[200px]">
+                    <div>
+                      <span className="text-xs uppercase tracking-widest text-gray-500 mb-4 block">
+                        {project.category}
+                      </span>
+                      <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-blue-400 transition-colors">{project.title}</h3>
+                      <p className="text-gray-400 font-light leading-relaxed">
+                        {project.description}
+                      </p>
+                    </div>
+                    <div className="mt-6 flex items-center text-sm font-medium text-gray-300 group-hover:text-white transition-colors">
+                      View Case Study <span className="ml-2">→</span>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </motion.div>
