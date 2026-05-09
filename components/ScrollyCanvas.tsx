@@ -21,31 +21,33 @@ export default function ScrollyCanvas() {
 
   useEffect(() => {
     const loadImages = async () => {
-      const loadedImages: HTMLImageElement[] = [];
-      let loadedCount = 0;
+      const loadedImagesArray: HTMLImageElement[] = new Array(FRAME_COUNT);
+      const promises = [];
 
       for (let i = 0; i < FRAME_COUNT; i++) {
-        const img = new Image();
-        // Format index as 3 digits
-        const paddedIndex = i.toString().padStart(3, "0");
-        img.src = `/sequence/frame_${paddedIndex}_delay-0.066s.png`;
+        promises.push(
+          new Promise((resolve) => {
+            const img = new Image();
+            const paddedIndex = i.toString().padStart(3, "0");
+            // Using the correct absolute path from the public directory
+            img.src = `/sequence/frame_${paddedIndex}_delay-0.066s.png`;
 
-        await new Promise((resolve) => {
-          img.onload = () => {
-            loadedImages.push(img);
-            loadedCount++;
-            if (loadedCount === FRAME_COUNT) {
-              setImages(loadedImages);
-              setLoaded(true);
-            }
-            resolve(null);
-          };
-          img.onerror = () => {
-            console.error(`Failed to load image at index ${i}`);
-            resolve(null);
-          };
-        });
+            img.onload = () => {
+              loadedImagesArray[i] = img;
+              resolve(true);
+            };
+            img.onerror = () => {
+              console.error(`Failed to load image: ${img.src}`);
+              // Resolve anyway so Promise.all completes even if a frame drops
+              resolve(false);
+            };
+          })
+        );
       }
+
+      await Promise.all(promises);
+      setImages(loadedImagesArray);
+      setLoaded(true);
     };
 
     loadImages();
