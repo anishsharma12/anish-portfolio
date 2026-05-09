@@ -35,16 +35,16 @@ const services = [
 
 
 const skills = [
-  "AI data annotation", "Audio transcription", "Speaker labeling", "Content evaluation", 
-  "AI response rating", "Hindi-English translation", "Localization review", 
-  "Search result evaluation", "Text classification", "Data labeling", 
-  "Quality assurance", "Grammar and readability checks", "Attention to detail", 
+  "AI data annotation", "Audio transcription", "Speaker labeling", "Content evaluation",
+  "AI response rating", "Hindi-English translation", "Localization review",
+  "Search result evaluation", "Text classification", "Data labeling",
+  "Quality assurance", "Grammar and readability checks", "Attention to detail",
   "Guideline-based task completion", "Remote freelance communication"
 ];
 
 const tools = [
-  "Google Docs", "Google Sheets", "Microsoft Excel", "Transcription tools", 
-  "AI evaluation platforms", "Freelance platforms", "Web research tools", 
+  "Google Docs", "Google Sheets", "Microsoft Excel", "Transcription tools",
+  "AI evaluation platforms", "Freelance platforms", "Web research tools",
   "ChatGPT-assisted productivity"
 ];
 
@@ -52,9 +52,9 @@ export default function PortfolioContent() {
   return (
     <section className="relative z-20 bg-[#121212] py-24 px-6 md:px-12 lg:px-24 text-white font-light">
       <div className="max-w-7xl mx-auto space-y-32">
-        
+
         {/* About Section */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -72,7 +72,7 @@ export default function PortfolioContent() {
         </motion.div>
 
         {/* Services Section */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -90,7 +90,7 @@ export default function PortfolioContent() {
         </motion.div>
 
         {/* Projects Section */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -126,7 +126,7 @@ export default function PortfolioContent() {
 
         {/* Skills & Tools Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -142,7 +142,7 @@ export default function PortfolioContent() {
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -160,7 +160,7 @@ export default function PortfolioContent() {
         </div>
 
         {/* Work Style Section */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -185,7 +185,10 @@ export default function PortfolioContent() {
           <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-12">
             Looking for a reliable freelancer for AI data annotation, transcription, translation, or content evaluation projects? Let’s create clean, accurate, and high-quality data.
           </p>
-          <a href="mailto:anishsharma4469@gmail.com?subject=Project%20Inquiry%20-%20AI%20Data%20Annotation%20%2F%20Transcription" className="inline-block bg-white text-black px-10 py-4 rounded-full font-semibold text-lg hover:scale-105 transition-transform duration-300">
+          <a
+            href="mailto:anishsharma4469@gmail.com?subject=Project%20Inquiry%20-%20AI%20Data%20Annotation%20%2F%20Transcription"
+            className="inline-block bg-white text-black px-10 py-4 rounded-full font-semibold text-lg hover:scale-105 transition-transform duration-300"
+          >
             Get In Touch
           </a>
         </motion.div>
