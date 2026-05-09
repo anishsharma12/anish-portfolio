@@ -185,14 +185,9 @@ export default function PortfolioContent() {
           <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-12">
             Looking for a reliable freelancer for AI data annotation, transcription, translation, or content evaluation projects? Let’s create clean, accurate, and high-quality data.
           </p>
-          <a href="mailto:anishsharma4469@gmail.com?subject=Project%20Inquiry%20-%20AI%20Data%20Annotation%20%2F%20Transcription" className="inline-block bg-white text-black px-10 py-4 rounded-full font-semibold text-lg hover:scale-105 transition-transform duration-300 mb-6">
+          <a href="mailto:anishsharma4469@gmail.com?subject=Project%20Inquiry%20-%20AI%20Data%20Annotation%20%2F%20Transcription" className="inline-block bg-white text-black px-10 py-4 rounded-full font-semibold text-lg hover:scale-105 transition-transform duration-300">
             Get In Touch
           </a>
-          <div>
-            <a href="mailto:anishsharma4469@gmail.com?subject=Project%20Inquiry%20-%20AI%20Data%20Annotation%20%2F%20Transcription" className="text-gray-400 hover:text-white transition-colors text-lg tracking-wide">
-              anishsharma4469@gmail.com
-            </a>
-          </div>
         </motion.div>
 
       </div>
