@@ -10,8 +10,14 @@ export function generateStaticParams() {
   }));
 }
 
-export default function ProjectCaseStudy({ params }: { params: { slug: string } }) {
-  const project = projectsData.find((p) => p.slug === params.slug);
+type Props = {
+  params: { slug: string } | Promise<{ slug: string }>;
+};
+
+export default async function ProjectCaseStudy({ params }: Props) {
+  // Await params to support both Next.js 14 and 15 dynamic routing behavior safely
+  const resolvedParams = await params;
+  const project = projectsData.find((p) => p.slug === resolvedParams.slug);
 
   if (!project) {
     notFound();
