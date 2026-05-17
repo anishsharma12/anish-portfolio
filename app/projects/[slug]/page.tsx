@@ -43,6 +43,20 @@ export default async function ProjectCaseStudy({ params }: Props) {
               </span>
             ))}
           </div>
+
+          {/* Optional Skills Demonstrated */}
+          {(project as any).skillsDemonstrated && (
+            <>
+              <h2 className="text-sm uppercase tracking-widest text-gray-500 font-semibold mt-8 mb-4">Skills Demonstrated</h2>
+              <div className="flex flex-wrap gap-2">
+                {(project as any).skillsDemonstrated.map((skill: string) => (
+                  <span key={skill} className="px-3 py-1 bg-white/[0.03] border border-blue-500/20 rounded-md text-sm text-blue-200/80">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </>
+          )}
         </div>
       </div>
 

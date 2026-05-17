@@ -129,4 +129,57 @@ export const projectsData = [
     ],
     finalOutcome: "A meticulously categorized dataset that proves readiness for scaling AI model training operations.",
   },
+  {
+    id: 6,
+    slug: "customer-communication-data-coordination",
+    title: "Customer Communication & Data Coordination – CIPT",
+    category: "Data Coordination",
+    description: "Handled farmer communication, query tracking, data validation, and reporting workflows using Excel, Google Sheets, and structured documentation. Focused on clear communication, issue resolution, and accurate operational data management.",
+    label: "Work-Based Project",
+    overview: "Managed farmer communication, query handling, follow-ups, and structured data coordination for field-based project operations. Focused on clear communication, issue tracking, documentation, and accurate reporting across multiple districts.",
+    objective: "The objective of this project was to support smooth communication between farmers, field teams, and the operations/data team by handling calls, documenting issues, tracking responses, and ensuring collected information was accurate and properly organized.",
+    myRole: "Customer Communication & Data Coordination Associate",
+    workflow: [
+      "Contacted farmers through follow-up calls and collected required project information.",
+      "Listened to farmer queries and documented issues clearly in tracking sheets.",
+      "Coordinated with the data manager, operations team, and field team for issue resolution.",
+      "Maintained structured Excel/Google Sheets records for call status, responses, corrections, and pending cases.",
+      "Reviewed collected data for accuracy, missing information, and inconsistencies.",
+      "Prepared daily, field visit, and periodic reports for internal review."
+    ],
+    toolsUsed: [
+      "Microsoft Excel",
+      "Google Sheets",
+      "Google Docs",
+      "Phone-based communication",
+      "Google Drive",
+      "Microsoft Word",
+      "Reporting templates"
+    ],
+    sampleOutput: `Call Status: Answered / Not Answered / Data Denied / Wrong Number\nQuery Type: Data correction / Farmer clarification / Field verification\nAction Taken: Recorded issue and shared with operations team\nFollow-up Status: Pending / Resolved / Escalated\nFinal Update: Farmer response verified and updated in tracking sheet`,
+    qualityChecklist: [
+      "Verified farmer details before updating records",
+      "Checked data for missing or inconsistent entries",
+      "Maintained clear status labels for each follow-up",
+      "Escalated unresolved issues to the correct team",
+      "Updated sheets regularly to avoid duplicate work",
+      "Ensured communication remained polite, clear, and professional"
+    ],
+    finalOutcome: "This project improved the consistency of farmer communication, reduced confusion in follow-ups, and helped maintain accurate operational records. By using structured tracking sheets and clear documentation, the team was able to manage queries, corrections, and reporting more efficiently.",
+    skillsDemonstrated: [
+      "Customer Support",
+      "Verbal Communication",
+      "Written Communication",
+      "Query Handling",
+      "Data Coordination",
+      "Documentation",
+      "Microsoft Excel",
+      "Google Sheets",
+      "Problem Solving",
+      "Attention to Detail",
+      "Remote Collaboration",
+      "Process Improvement",
+      "Multilingual Communication"
+    ]
+  }
 ];
